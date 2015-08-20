@@ -1,0 +1,12 @@
+{
+    "dir":[
+    {"dirname":"src","file":"[project].js"},
+    {"dirname":"js"},
+    {"dirname":"less","file":"[project].less"},
+    {"dirname":"css"},
+    {"dirname":"demo"},
+    {"dirname":"tpl"},
+    {"dirname":"images"},
+    {"dirname":"build"}],
+    "file":["package.json","gruntfile.js",".gitignore"]
+}

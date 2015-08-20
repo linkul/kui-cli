@@ -1,0 +1,35 @@
+{
+  "name": "kui-cli",
+  "description": "kui打包工具",
+  "version": "0.0.1",
+  "homepage": "http://gitlab.alibaba-inc.com/kui/kui-cli",
+  "author": {
+    "name": "linkul",
+    "url": "http://gitlab.alibaba-inc.com/kui/kui-cli"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@gitlab.alibaba-inc.com:kui/kui-cli.git"
+  },
+  "bugs": {
+    "url": "http://gitlab.alibaba-inc.com/kui/kui-cli/issues"
+  },
+  "engines": {
+    "node": ">=0.8.0"
+  },
+  "bin": {
+    "kui": "bin/kui.js"
+  },
+  "dependencies": {
+    "cli-color": "^1.0.0",
+    "commander": "^2.8.1",
+    "fs-extra": "0.12.0",
+    "progress":"*"
+  },
+  "publishConfig": {
+    "registry": "http://registry.npm.alibaba-inc.com"
+  },
+  "keywords": [
+    "kui-cli"
+  ]
+}
