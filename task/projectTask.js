@@ -92,10 +92,8 @@ function initGruntFile(){
     var fileStr='/*\n'
         +"* created by 习木(yelin.yl@alibab-inc.com)\n"
         +"*/\n"
-        +"var path = require('path');\n"
         +"var grunt = require('./node_modules/kui/PublicGruntfile.js');\n"
         +"module.exports=grunt({\n"
-        +"  basename:path.basename(__dirname)\n"
         +"});\n";
     fse.writeFileSync('GruntFile.js', fileStr);
 }
