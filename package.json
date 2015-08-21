@@ -1,7 +1,7 @@
 {
   "name": "kui-cli",
   "description": "kui打包工具",
-  "version": "0.0.1",
+  "version": "0.1.1",
   "homepage": "https://github.com/linkul/kui-cli",
   "author": {
     "name": "linkul",

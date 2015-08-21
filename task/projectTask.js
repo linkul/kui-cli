@@ -50,7 +50,7 @@ function initProject(projectName,multiple){
                 file=file.replace("[project]",projectName?projectName:pkg.name);
                 fse.exists(dirPath+"/"+file,function(hasInstall){
                     if(!hasInstall){
-                        fse.writeFileSync(dirPath+"/"+file);
+                        fse.writeFileSync(dirPath+"/"+file,"");
                         log("mkfile "+dirPath+"/"+file+" ok!");
                     }
                     current++;
@@ -157,8 +157,8 @@ module.exports ={
                 log(clc.xterm(196)("请切换到根目录！如果未初始化，请先运行 "+clc.xterm(165)('"kui install"')+" 初始化前端项目"));
                 return false;
             }
-            if(options&&options.multiple||required){
-                if(typeof(options.multiple)!="string"&&!required){
+            if(options&&options.multiple){
+                if(typeof(options.multiple)!="string"){
                     log(clc.xterm(196)("请输入项目名称！"));
                     return false;
                 }
@@ -168,6 +168,15 @@ module.exports ={
                         log("mkdir "+options.multiple+" ok!");
                     }
                     initProject(options.multiple,true);
+                })
+            }
+            else if(required){
+                fse.exists(name,function(hasInstall){
+                    if(!hasInstall){
+                        fse.mkdir(name);
+                        log("mkdir "+name+" ok!");
+                    }
+                    initProject(name,true);
                 })
             }
             else{
